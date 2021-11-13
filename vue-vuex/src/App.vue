@@ -18,12 +18,7 @@ export default {
   },
   data(){
     return {
-      products:[
-        {title: 'Tv', price: 5000},
-        {title: 'Pc', price: 8000},
-        {title: 'Game Console', price: 15000},
-        {title: 'Phone', price: 6000},
-      ]
+      
     }
   }
 }
