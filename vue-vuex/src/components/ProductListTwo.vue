@@ -41,6 +41,7 @@ export default {
             this.$store.commit('discountPrice', price);
         }
     }
+    
 }
 </script>
 

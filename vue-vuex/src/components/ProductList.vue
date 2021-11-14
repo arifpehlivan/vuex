@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import {mapGetters} from 'vuex';
 export default {
     data(){
         return{
@@ -21,16 +22,19 @@ export default {
         products(){
             return this.$store.state.products;
         },
-         discountProducts(){
-             return this.$store.getters.discountProducts;
-        //     var discounted = this.$store.state.products.map(product=>{
-        //         return {
-        //             title: '%50 off ' + product.title,
-        //             price: product.price/2
-        //         }
-        //     });
-        //     return discounted;
-         }
+        ...mapGetters([
+            'discountProducts'
+        ])
+        //  discountProducts(){
+        //      return this.$store.getters.discountProducts;
+        // //     var discounted = this.$store.state.products.map(product=>{
+        // //         return {
+        // //             title: '%50 off ' + product.title,
+        // //             price: product.price/2
+        // //         }
+        // //     });
+        // //     return discounted;
+        //  }
     },
     methods:{
         discountPrice:function(){
