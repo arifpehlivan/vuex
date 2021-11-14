@@ -1,3 +1,3 @@
 # vuex
-## Store state getters mutation
+## Store state getters mutation mapGetters mapActions
 
