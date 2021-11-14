@@ -1,3 +1,3 @@
 # vuex
-## Create component
+## Store state getters
 
