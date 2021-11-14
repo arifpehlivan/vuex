@@ -1,3 +1,3 @@
 # vuex
-## Store state getters
+## Store state getters mutation
 
