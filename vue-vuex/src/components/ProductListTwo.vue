@@ -2,7 +2,7 @@
   <div id="product-list-two">
       <h2>Product List Two</h2>
       <ul>
-          <li v-for="(product,index) in products" :key="index">
+          <li v-for="(product,index) in discountProducts" :key="index">
             <span class="title">{{ product.title }}</span>
             <span class="price"> ${{ product.price }}</span>
           </li>
@@ -20,7 +20,17 @@ export default {
     computed:{
         products(){
             return this.$store.state.products;
-        }
+        },
+        discountProducts(){
+             return this.$store.getters.discountProducts;
+        //     var discounted = this.$store.state.products.map(product=>{
+        //         return {
+        //             title: '%50 off ' + product.title,
+        //             price: product.price/2
+        //         }
+        //     });
+        //     return discounted;
+         }
     }
 }
 </script>
