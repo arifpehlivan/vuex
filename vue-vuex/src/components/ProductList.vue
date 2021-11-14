@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
+import {mapGetters,mapActions} from 'vuex';
 export default {
     data(){
         return{
@@ -37,10 +37,13 @@ export default {
         //  }
     },
     methods:{
-        discountPrice:function(){
-            // this.$store.commit('discountPrice');
-            this.$store.dispatch('discountPrice')
-        }
+        // discountPrice:function(){
+        //     // this.$store.commit('discountPrice');
+        //     this.$store.dispatch('discountPrice')
+        // }
+        ...mapActions([
+            'discountPrice'
+        ])
     }
 }
 </script>
