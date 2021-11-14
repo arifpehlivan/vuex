@@ -34,7 +34,8 @@ export default {
     },
     methods:{
         discountPrice:function(){
-            this.$store.commit('discountPrice');
+            // this.$store.commit('discountPrice');
+            this.$store.dispatch('discountPrice')
         }
     }
 }

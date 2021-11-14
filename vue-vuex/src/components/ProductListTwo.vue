@@ -7,7 +7,7 @@
             <span class="price"> ${{ product.price }}</span>
           </li>
       </ul>
-      <button v-on:click="discountPrice">Discount Price</button>
+      <button v-on:click="discountPrice(100)">Discount Price</button>
   </div>
 </template>
 
@@ -34,11 +34,11 @@ export default {
          }
     },
     methods:{
-        discountPrice:function(){
+        discountPrice:function(price){
             // this.$store.state.products.forEach(product=>{
             //     product.price -=1000;
             // })
-            this.$store.commit('discountPrice');
+            this.$store.commit('discountPrice', price);
         }
     }
 }
