@@ -31,6 +31,11 @@ export default {
         //     });
         //     return discounted;
          }
+    },
+    methods:{
+        discountPrice:function(){
+            this.$store.commit('discountPrice');
+        }
     }
 }
 </script>
